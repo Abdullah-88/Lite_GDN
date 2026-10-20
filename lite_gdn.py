@@ -51,7 +51,6 @@ class Delta(nn.Module):
     def __init__(self, d_model):
         super().__init__()
         
-        self.d_model = d_model
         self.proj_source = nn.Linear(d_model, d_model, bias = False)
         self.proj_destination = nn.Linear(d_model, d_model, bias = False)
         self.to_alpha_gate = nn.Linear(d_model, 1, bias = False)
